@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #4a2c2a;
+    background-color: #fdf6f0;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #4a2c2a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #f5ede3;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #f5ede3;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #e8b4a2;
+}
+
+/* Mobile nav */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(rgba(74, 44, 42, 0.45), rgba(74, 44, 42, 0.45)),
+                url('images/cakehero.png') center 30%/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 500px;
+}
+
+/* About section */
+.about {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #a85b4c;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #e8b4a2;
+    margin: 12px auto 0;
+}
+
+.about p {
+    font-size: 1.05rem;
+    color: #5c3d2e;
+}
+
+/* Footer */
+.footer {
+    background-color: #4a2c2a;
+    color: #f5ede3;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
