@@ -1,14 +1,9 @@
 const pasteles = document.querySelector('.pasteles');
 
 const cakeImages = [
-    "cake1.jpg",
-    "cake2.jpg",
-    "cake3.jpg",
-    "cake4.jpg",
-    "cake5.jpg",
-    "cake6.jpg",
-    "cake7.jpg",
-    "cake8.jpg",
+    "cakemama.jpg",
+    "plantas.jpg",
+    "tresleches.jpg",
 ]
 
 const cakesHTML = cakeImages.map((img) => {

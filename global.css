@@ -1,0 +1,100 @@
+:root {
+    /* Brand palette — used across global.css, pasteles.css, styles.css, horarios.css */
+    --color-brown-dark: #4a2c2a;   /* navbar bg, footer bg, body text */
+    --color-cream-bg: #fdf6f0;     /* page background */
+    --color-cream-light: #f5ede3;  /* nav text, section bg */
+    --color-peach: #e8b4a2;        /* hover accents, dividers */
+    --color-rust: #a85b4c;         /* headings */
+    --color-tan-border: #cebfaf;   /* card borders */
+    --color-text-secondary: #5c3d2e; /* body copy on light bg */
+    --font-body: 'Georgia', 'Times New Roman', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-brown-dark);
+    background-color: var(--color-cream-bg);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--color-brown-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: var(--color-cream-light);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-peach);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icons img{
+    display: flex;
+    width: 50px;
+}
+
+/* Mobile nav */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        gap: 12px;
+        padding: 15px 20px;
+    }
+ 
+    .logo img {
+        width: 80px;
+        margin-bottom: 1px;
+    }
+ 
+    .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0.95rem;
+    }
+ 
+    .social-icons {
+        gap: 12px;
+    }
+ 
+    .social-icons img {
+        width: 38px;
+    }
+}

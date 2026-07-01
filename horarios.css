@@ -1,0 +1,255 @@
+/* horarios.css — page-specific styles for Horarios page
+   Uses CSS variables so it's easy to align with global.css if you
+   already have a defined palette there. Adjust the values below
+   to match your existing brand colors. */
+
+:root {
+  --delimundo-pink: #f6d6dd;
+  --delimundo-pink-dark: #e8a8b8;
+  --delimundo-cream: #fff8f1;
+  --delimundo-brown: #6b4226;
+  --delimundo-brown-light: #9c6b4f;
+  --delimundo-green: #cfe8d8;
+  --delimundo-red-closed: #f3c6c6;
+}
+
+.horarios-hero {
+  text-align: center;
+  padding: 3rem 1.5rem 1.5rem;
+}
+
+.horarios-hero h2 {
+  font-size: 2.2rem;
+  color: var(--delimundo-brown);
+  margin-bottom: 0.5rem;
+}
+
+.horarios-subtitle {
+  color: var(--delimundo-brown-light);
+  font-size: 1.05rem;
+}
+
+.horarios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+}
+
+.horario-card {
+  background: var(--delimundo-cream);
+  border: 1px solid var(--delimundo-pink);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(107, 66, 38, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.horario-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(107, 66, 38, 0.14);
+}
+
+.horario-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--delimundo-pink);
+  color: var(--delimundo-brown);
+  font-size: 1.4rem;
+}
+
+.horario-card.closed .horario-icon {
+  background: var(--delimundo-red-closed);
+}
+
+.horario-info h3 {
+  color: var(--delimundo-brown);
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.horario-info p {
+  color: var(--delimundo-brown-light);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.horario-card.closed .horario-info p {
+  color: #b75d5d;
+  font-weight: 600;
+}
+
+.horarios-cta {
+  text-align: center;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.horarios-cta p {
+  color: var(--delimundo-brown-light);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background: #1ebc59;
+  transform: translateY(-2px);
+}
+
+.cta-button i {
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .horario-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .horarios-hero h2 {
+    font-size: 1.8rem;
+  }
+}
+.horarios-hero {
+  text-align: center;
+  padding: 3rem 1.5rem 1.5rem;
+}
+
+.horarios-hero h2 {
+  font-size: 2.2rem;
+  color: var(--delimundo-brown);
+  margin-bottom: 0.5rem;
+}
+
+.horarios-subtitle {
+  color: var(--delimundo-brown-light);
+  font-size: 1.05rem;
+}
+
+.horarios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+}
+
+.horario-card {
+  background: var(--delimundo-cream);
+  border: 1px solid var(--delimundo-pink);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(107, 66, 38, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.horario-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(107, 66, 38, 0.14);
+}
+
+.horario-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--delimundo-pink);
+  color: var(--delimundo-brown);
+  font-size: 1.4rem;
+}
+
+.horario-card.closed .horario-icon {
+  background: var(--delimundo-red-closed);
+}
+
+.horario-info h3 {
+  color: var(--delimundo-brown);
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.horario-info p {
+  color: var(--delimundo-brown-light);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.horario-card.closed .horario-info p {
+  color: #b75d5d;
+  font-weight: 600;
+}
+
+.horarios-cta {
+  text-align: center;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.horarios-cta p {
+  color: var(--delimundo-brown-light);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background: #1ebc59;
+  transform: translateY(-2px);
+}
+
+.cta-button i {
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .horario-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .horarios-hero h2 {
+    font-size: 1.8rem;
+  }
+}
