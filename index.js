@@ -3,7 +3,7 @@ const pasteles = document.querySelector('.pasteles');
 const cakeImages = [
     "cakemama.jpg",
     "plantas.jpg",
-    "tresleches.jpg",
+    "tresLeches.jpg",
 ]
 
 const cakesHTML = cakeImages.map((img) => {
