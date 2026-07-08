@@ -1,4 +1,4 @@
-.pasteles {
+.postres {
     background-color: var(--color-cream-light);
     padding: 60px 20px;
     display: grid;
@@ -8,7 +8,7 @@
     margin: 0 auto;
 }
 
-.pastel-card {
+.postre-card {
     background-color: #ffffff;
     border: 1px solid var(--color-tan-border);
     border-radius: 12px;
@@ -17,12 +17,12 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.pastel-card:hover {
+.postre-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 16px rgba(92, 61, 46, 0.18);
 }
 
-.pastel-card img {
+.postre-card img {
     width: 100%;
     aspect-ratio: 3 / 5;
     object-fit: cover;
@@ -32,7 +32,7 @@
 
 /* Tablet */
 @media (max-width: 768px) {
-    .pasteles {
+    .postres {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 16px;
         padding: 40px 16px;
@@ -41,7 +41,7 @@
 
 /* Mobile */
 @media (max-width: 480px) {
-    .pasteles {
+    .postres {
         grid-template-columns: 1fr;
         padding: 32px 14px;
         gap: 14px;
