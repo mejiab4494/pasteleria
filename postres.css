@@ -1,10 +1,10 @@
 .postres {
-    background-color: var(--color-cream-light);
+   
     padding: 60px 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px;
-    max-width: 1300px;
+    max-width: 1700px;
     margin: 0 auto;
 }
 
@@ -24,7 +24,7 @@
 
 .postre-card img {
     width: 100%;
-    aspect-ratio: 3 / 5;
+    aspect-ratio: 5 / 5;
     object-fit: cover;
     object-position: center;
     display: block;

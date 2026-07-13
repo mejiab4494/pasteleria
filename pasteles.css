@@ -1,10 +1,20 @@
+body {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23d8b58c' stroke-width='1.2' opacity='0.35'%3E%3Ccircle cx='20' cy='20' r='6'/%3E%3Cpath d='M20 14 Q23 20 20 26 Q17 20 20 14'/%3E%3Cpath d='M14 20 Q20 17 26 20 Q20 23 14 20'/%3E%3Ccircle cx='90' cy='55' r='5'/%3E%3Cpath d='M90 50 Q92.5 55 90 60 Q87.5 55 90 50'/%3E%3Cpath d='M85 55 Q90 52.5 95 55 Q90 57.5 85 55'/%3E%3Ccircle cx='45' cy='95' r='6'/%3E%3Cpath d='M45 89 Q48 95 45 101 Q42 95 45 89'/%3E%3Cpath d='M39 95 Q45 92 51 95 Q45 98 39 95'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 220px 220px;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Pasteles Section - Floral Bakery Background ===== */
 .pasteles {
-    background-color: var(--color-cream-light);
+   
     padding: 60px 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px;
-    max-width: 1300px;
+    max-width: 1700px;
     margin: 0 auto;
 }
 
@@ -24,7 +34,7 @@
 
 .pastel-card img {
     width: 100%;
-    aspect-ratio: 3 / 5;
+    aspect-ratio: 5 / 5;
     object-fit: cover;
     object-position: center;
     display: block;

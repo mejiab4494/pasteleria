@@ -1,20 +1,9 @@
+import cakeImages from "./cakes.js";
+import postreImages from "./postres.js";
+
 const pasteles = document.querySelector(".pasteles");
 const postres = document.querySelector(".postres");
 
-const cakeImages = [
-    "cakemama.jpg",
-    "plantas.jpg",
-    "tresLeches.jpg",
-    "pasteles1.jpg",
-    "pasteles2.jpg",
-    "pasteles3.jpg",
-];
-
-const postreImages = [
-    "cheesecake.jpg",
-    "chocoflan.jpg",
-    "cupbakes.jpg",
-];
 
 if (pasteles) {
     const cakesHTML = cakeImages.map(img => `
