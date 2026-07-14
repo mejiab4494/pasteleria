@@ -21,6 +21,12 @@ body {
     color: var(--color-brown-dark);
     background-color: var(--color-cream-bg);
     line-height: 1.6;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23d8b58c' stroke-width='1.2' opacity='0.35'%3E%3Ccircle cx='20' cy='20' r='6'/%3E%3Cpath d='M20 14 Q23 20 20 26 Q17 20 20 14'/%3E%3Cpath d='M14 20 Q20 17 26 20 Q20 23 14 20'/%3E%3Ccircle cx='90' cy='55' r='5'/%3E%3Cpath d='M90 50 Q92.5 55 90 60 Q87.5 55 90 50'/%3E%3Cpath d='M85 55 Q90 52.5 95 55 Q90 57.5 85 55'/%3E%3Ccircle cx='45' cy='95' r='6'/%3E%3Cpath d='M45 89 Q48 95 45 101 Q42 95 45 89'/%3E%3Cpath d='M39 95 Q45 92 51 95 Q45 98 39 95'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 220px 220px;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 /* Navbar */
@@ -69,13 +75,25 @@ body {
     width: 25px;
 }
 
-.phone-link {
-    color: var(--color-cream-light); /* swap for whatever variable you're using */
-    display: none;
+
+.prices {
+    width: 100%;
+    max-width: 40em;
+    border: none;
+    margin: 10px auto;
+    padding: 0 16px;
 }
 
-.phone-link svg {
+.prices img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
     display: block;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 8px; /* optional, matches your card style elsewhere */
 }
 
 /* Mobile nav */
@@ -106,140 +124,10 @@ body {
     .social-icons img {
         width: 38px;
     }
-    .phone-link {
-    display: inline-block;
-    border: 3px solid var(--color-cream-light);
-    border-radius: 50%;
-    padding: 4px;
-    width: 24px;
-    height: 24px;
-    box-sizing: content-box; /* keeps border/padding from shrinking the icon itself */
-}
 
-.phone-link svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-}
-
-body {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23d8b58c' stroke-width='1.2' opacity='0.35'%3E%3Ccircle cx='20' cy='20' r='6'/%3E%3Cpath d='M20 14 Q23 20 20 26 Q17 20 20 14'/%3E%3Cpath d='M14 20 Q20 17 26 20 Q20 23 14 20'/%3E%3Ccircle cx='90' cy='55' r='5'/%3E%3Cpath d='M90 50 Q92.5 55 90 60 Q87.5 55 90 50'/%3E%3Cpath d='M85 55 Q90 52.5 95 55 Q90 57.5 85 55'/%3E%3Ccircle cx='45' cy='95' r='6'/%3E%3Cpath d='M45 89 Q48 95 45 101 Q42 95 45 89'/%3E%3Cpath d='M39 95 Q45 92 51 95 Q45 98 39 95'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 220px 220px;
-    background-attachment: fixed;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-/* ===== Prices Section - Rectangular Menu Card ===== */
-.prices {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 28px 40px;
-    background-color: #fdf8f0;
-    border: 1px solid var(--color-tan-border, #d8b58c);
-    border-radius: 4px;
-    box-shadow: 0 4px 18px rgba(92, 61, 46, 0.15);
-    position: relative;
-}
-
-.prices::before,
-.prices::after {
-    content: "";
-    position: absolute;
-    left: 16px;
-    right: 16px;
-    height: 1px;
-    background-color: var(--color-tan-border, #d8b58c);
-}
-
-.prices::before { top: 8px; }
-.prices::after { bottom: 8px; }
-
-.prices h1 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1.5rem;
-    font-weight: normal;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--color-brown-dark, #5c3d2e);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.prices > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 6px 20px;
-    padding: 12px 0;
-    border-top: 1px dashed var(--color-tan-border, #d8b58c);
-}
-
-.prices > div:first-child {
-    border-top: none;
-}
-
-.prices h2 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: var(--color-brown-dark, #5c3d2e);
-    flex: 1 1 100%;
-    margin-bottom: 4px;
-}
-
-.prices p {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 0.85rem;
-    color: #6b5648;
-    margin: 0;
-}
-
-.prices > div:first-child p {
-    flex: 1;
-    text-align: center;
-    position: relative;
-    padding: 2px 8px;
-}
-
-.prices > div:first-child p:not(:last-child)::after {
-    content: "•";
-    position: absolute;
-    right: -14px;
-    color: var(--color-tan-border, #d8b58c);
-}
-
-.prices > div:first-child p::before {
-    display: block;
-    font-size: 0.65rem;
-    color: #9a8570;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 2px;
-}
-
-.prices > div:first-child p:nth-of-type(1)::before { content: "Pequeño"; }
-.prices > div:first-child p:nth-of-type(2)::before { content: "Mediano"; }
-.prices > div:first-child p:nth-of-type(3)::before { content: "Grande"; }
-
-.prices > div:last-child p {
-    font-style: italic;
-    flex: 1;
-    text-align: center;
-}
-
-@media (max-width: 480px) {
     .prices {
-        padding: 20px 20px;
-        margin: 24px 16px;
-    }
-    .prices > div:first-child {
-        flex-direction: column;
-        align-items: center;
-    }
-    .prices > div:first-child p:not(:last-child)::after {
-        content: "";
+        padding: 0 12px;
+        margin: 8px auto;
     }
 }
+
