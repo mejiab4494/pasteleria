@@ -47,7 +47,6 @@ const cakeImages = [
     "IMG_5336 (1).webp",
     "IMG_5401.webp",
     "IMG_5457.webp",
-    "IMG_5458.webp",
     "IMG_5526.webp",
     "IMG_5646.webp",
     "IMG_5653.webp",
