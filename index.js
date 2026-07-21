@@ -24,3 +24,15 @@ if (postres) {
 
     postres.innerHTML = postresHTML;
 }
+
+//map
+const map = L.map('map').setView([13.692572, -88.942970], 16);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+L.marker([13.692572, -88.942970])
+    .addTo(map)
+    .bindPopup('DeliMundo')
+    .openPopup();

@@ -1,7 +1,21 @@
-/* horarios.css — page-specific styles for Horarios page
-   Uses CSS variables so it's easy to align with global.css if you
-   already have a defined palette there. Adjust the values below
-   to match your existing brand colors. */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+.footer {
+    margin-top: auto;
+}
 
 :root {
   --delimundo-pink: #f6d6dd;

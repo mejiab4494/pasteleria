@@ -53,6 +53,70 @@
     color: var(--color-text-secondary);
 }
 
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 2.5rem auto 0;
+    padding: 0 1.5rem;
+}
+
+.process-grid > div {
+    background: var(--delimundo-cream, #fff8f1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(107, 66, 38, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.process-grid > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(107, 66, 38, 0.14);
+}
+
+.process-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.process-grid h3 {
+    color: var(--delimundo-brown, #6b4226);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.process-grid p {
+    color: var(--delimundo-brown-light, #9c6b4f);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Stack on mobile */
+@media (max-width: 600px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+.process-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
 
 .location-section {
     max-width: 1200px;
@@ -69,7 +133,6 @@
 }
 
 .location-content h1 {
-    font-size: 2.3rem;
     color: var(--color-rust);
     margin-bottom: 20px;
 }
@@ -102,15 +165,35 @@
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* Footer */
-.footer {
-    background-color: var(--color-brown-dark);
-    color: var(--color-cream-light);
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
+
+#map {
+    height: 450px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
+.mapBtn {
+    display: inline-block;
+    align-self: center;
+    width: 200px;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #3b6ea5;
+    color: var(--color-cream-light);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(74, 44, 42, 0.25);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.mapBtn:hover {
+    background-color: var(--color-peach);
+    color: #2c5580;
+    transform: translateY(-2px);
+}
 
 /* Tablets and smaller screens */
 @media (max-width: 768px) {

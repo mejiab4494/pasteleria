@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* rest of your global.css rules below */
+
 :root {
     /* Brand palette — used across global.css, pasteles.css, styles.css, horarios.css */
     --color-brown-dark: #4a2c2a;   /* navbar bg, footer bg, body text */
@@ -16,6 +20,10 @@
     box-sizing: border-box;
 }
 
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
 body {
     font-family: var(--font-body);
     color: var(--color-brown-dark);
@@ -27,6 +35,10 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+}
+
+body, p, a, li {
+    font-family: 'Lato', sans-serif;
 }
 
 /* Navbar */
@@ -96,6 +108,76 @@ body {
     border-radius: 8px; /* optional, matches your card style elsewhere */
 }
 
+/* Footer */
+.footer {
+    background-color: var(--color-brown-dark);
+    color: var(--color-cream-light);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+
+.footer-dev {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+.footer-dev a {
+    color: var(--color-peach);
+    text-decoration: none;
+}
+
+.fa-brands {
+   padding-right: 3px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    height: 58px;
+    padding: 0 22px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    animation: whatsapp-pulse 2.5s infinite;
+}
+
+.whatsapp-float i {
+    font-size: 1.4rem;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    animation: none;
+}
+
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+    70% {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 0 0 14px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
 /* Mobile nav */
 @media (max-width: 600px) {
     .navbar {
@@ -129,5 +211,18 @@ body {
         padding: 0 12px;
         margin: 8px auto;
     }
+      .whatsapp-float {
+        height: 48px;
+        padding: 0 16px;
+        font-size: 0.85rem;
+        bottom: 16px;
+        right: 16px;
+        gap: 6px;
+    }
+
+    .whatsapp-float i {
+        font-size: 1.2rem;
+    }
+
 }
 
